@@ -287,7 +287,7 @@ export default function WordSearchPage() {
             </option>
             <option value="custom">Custom</option>
           </select>
-
+          {/* Toggles */}
           <fieldset className="border rounded p-3 mb-4">
             <legend className="text-sm font-medium px-1">Directions</legend>
             <div className="space-y-1 text-sm">
@@ -324,20 +324,19 @@ export default function WordSearchPage() {
                 />
                 <span>Diagonal</span>
               </label>
+              <label className="flex items-center gap-2 text-sm mb-4">
+                <input
+                  type="checkbox"
+                  checked={backwards}
+                  onChange={(e) => {
+                    setBackwards(e.target.checked);
+                    markCustom();
+                  }}
+                />
+                <span>Allow backwards words (reversed text)</span>
+              </label>
             </div>
           </fieldset>
-
-          <label className="flex items-center gap-2 text-sm mb-4">
-            <input
-              type="checkbox"
-              checked={backwards}
-              onChange={(e) => {
-                setBackwards(e.target.checked);
-                markCustom();
-              }}
-            />
-            <span>Allow backwards words (reversed text)</span>
-          </label>
 
           <button
             type="submit"
