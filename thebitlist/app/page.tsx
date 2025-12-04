@@ -3,6 +3,9 @@ import Link from "next/link";
 export default function HomePage() {
   const tools = [
     { slug: "wordsearch", name: "Word Search Builder" },
+    { slug: "bingo", name: "Bingo Builder" },
+    { slug: "crossword",  name: "Crossword Generator"}
+
   ];
 
   return (
